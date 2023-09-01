@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="calci-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="calcistyle.css">
+    <script src="calcijs.js"></script>
+    <script>
+        function toggleColor() {
+    var rootElement = document.documentElement;
+    if (rootElement.style.filter === 'invert(0)' || rootElement.style.filter === '') {
+        rootElement.style.filter = 'invert(1)';
+    } else {
+        rootElement.style.filter = 'invert(0)';
+    }
+}
+    </script>
+
+</head>
+
+<body>
+    <div class="head">
+        
+        <div class="heading">
+        <h1>CALCULATOR</h1>
+    </div>
+    <div class="mode-container">
+        <button class="mode">
+            <i class="fa-solid fa-moon" onclick="toggleColor()"></i>
+        </button>
+    </div>
+    </div>
+
+
+    <div class="calci">
+        <div class="calci-content">
+            <table>
+
+                <tr>
+
+                    <td colspan="4" class="inp-box">
+                        <p id="demo">
+                        </p>
+                        <p id="result" class="box"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="opr sm val" onclick="ans('ac')">AC</td>
+                    <td class="opr val" onclick="ans('back')"><i class="fa-solid fa-delete-left"></i></td>
+                    <td class="opr sm val" onclick="ans('+/-')">( )</td>
+                    <td class="opr val" onclick="ans('/')">
+                        <i class="fa-solid fa-divide"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="val" onclick="ans('7')">7</td>
+                    <td class="val" onclick="ans('8')">8</td>
+                    <td class="val" onclick="ans('9')">9</td>
+                    <td class="opr val" onclick="ans('*')"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                    <td class="val" onclick="ans('4')">4</td>
+                    <td class="val" onclick="ans('5')">5</td>
+                    <td class="val" onclick="ans('6')">6</td>
+                    <td class="opr val" onclick="ans('-')"><i class="fa-solid fa-minus"></i></td>
+                </tr>
+                <tr>
+                    <td class="val" onclick="ans('1')">1</td>
+                    <td class="val" onclick="ans('2')">2</td>
+                    <td class="val" onclick="ans('3')">3</td>
+                    <td class="opr val" onclick="ans('+')"><i class="fa-solid fa-plus"></i></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="opr val" onclick="ans('0')">0</td>
+                    <td class="opr val" onclick="ans('.')">.</td>
+                    <td class="opr val" onclick="ans('=')"><i class="fa-solid fa-equals"></i></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

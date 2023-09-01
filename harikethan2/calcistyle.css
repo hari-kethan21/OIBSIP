@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+
+body{
+    filter: invert(0); /* Inverting all colors */
+    background-color: #0E2954;
+}
+/* Heading and mode changer */
+.head {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 3rem;
+}
+.head h1{
+    color: lightblue;
+    padding-left: 4rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: cursive;
+}
+.heading{
+    width: 96%;
+}
+.mode {
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: black;
+}
+.mode i {
+    font-size: 2.5rem;
+    padding: 1rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+/* Calci section */
+.calci {
+    display: flex;
+    justify-content: center;
+}
+
+.calci-content {
+    padding: 2.2rem;
+    background-color: #272829;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+
+table {
+    border: none;
+    outline: none;
+    border-spacing: 0.8rem;
+}
+
+td {
+    font-size: 2.7rem;
+    text-align: center;
+    padding: 5px 30px;
+    border: 1px solid #90acc7;
+    border-radius: 2rem;
+    background-color: #90acc7;
+    border-spacing: 2px;
+}
+
+td i {
+    font-size: 2rem;
+}
+
+.opr {
+    background-color: #70a0cf;
+}
+
+.box {
+    font-size: 2rem;
+    text-align: right;
+    padding: 6px 30px;
+    border: none;
+    border-radius: 2rem;
+    background-color: #90acc7;
+    color: #00000080;
+    height: 50px;
+    outline: none;
+}
+
+.box:focus {
+    border: none;
+    outline: none;
+}
+
+.sm {
+    font-size: 2rem;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+.inp-box {
+    padding: 0.5rem;
+}
+
+td:hover:not(.inp-box) {
+    background-color: #398bd9;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+td p {
+    color: black;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0.85rem;
+    text-align: right;
+    height: 3.6rem;
+   
+}
+
+@media screen and (max-width: 768px) {
+    .head h1 {
+        font-size: 2rem;
+        padding: 0;
+    }
+    .head {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .mode i {
+        font-size: 2rem;
+        padding: 0.8rem;
+    }
+    .calci {
+        justify-content: center;
+    }
+    .calci-content {
+        padding: 1.5rem;
+    }
+    td {
+        font-size: 1.5rem;
+        padding: 2px 12px;
+    }
+    td i {
+        font-size: 1rem;
+    }
+    .sm {
+        font-size: 1rem;
+        font-family: Arial;
+        font-weight: 600;
+    }
+    .box {
+        font-size: 1.5rem;
+        padding: 6px 21px;
+        height: 2rem;
+    }
+    td p {
+        height: 2rem;
+        font-size: 2.5rem;
+    }
+
+}
